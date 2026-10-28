@@ -8,13 +8,14 @@ pipeline {
 
     environment {
         TOMCAT_URL = 'http://3.26.204.115:9090/'
-        APP_NAME = 'maven-web-app'
+        APP_NAME = 'TestWebApp'
     }
 
     stages {
 
         stage('Get Code') {
             steps {
+                git branch: 'main',
                 git 'https://github.com/subhashshivangi/TestWebApp.git'
             }
         }
