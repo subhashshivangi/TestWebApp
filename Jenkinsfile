@@ -7,7 +7,7 @@ pipeline {
     }
 
     environment {
-        TOMCAT_URL = 'http://13.210.141.126:9090/'
+        TOMCAT_URL = 'http://13.239.98.183:9090/'
         APP_NAME = 'TestWebApp'
     }
 
@@ -46,7 +46,7 @@ pipeline {
                     sh '''
                         curl --fail --upload-file target/TestWebApp.war \
                         -u "admin:Admin@123" \
-                        "http://13.210.141.126:9090/manager/text/deploy?path=/TestWebApp&update=true"
+                        "http://13.239.98.183:9090/manager/text/deploy?path=/TestWebApp&update=true"
                     '''
                 }
             }
