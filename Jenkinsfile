@@ -16,7 +16,7 @@ pipeline {
         stage('Get Code') {
             steps {
                 git branch: 'main',
-                git 'https://github.com/subhashshivangi/TestWebApp.git'
+                url: 'https://github.com/subhashshivangi/TestWebApp.git'
             }
         }
 
